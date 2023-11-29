@@ -1,9 +1,10 @@
 
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import navData from "../../constant";
 import "./nav.css";
 const NavBar = () => {
   return (
+    <>
     <ul className="nav">
       {navData.map((nav) => {
         return (
@@ -12,7 +13,12 @@ const NavBar = () => {
         </Link>
         )
       })}
+
     </ul>
+    <Outlet/>  
+   
+    {/*  this is used in parent route  and this exactly use where we want to render child sharable data */}
+    </>
   );
 };
 

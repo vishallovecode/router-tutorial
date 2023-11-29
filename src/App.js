@@ -12,17 +12,34 @@ import Login from "./component/login";
 export default function App() {
   return (
     <div className="App">
-      <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route  path="/" element = {<NavBar/>}>
+          <Route element={<Home />} />
           <Route path = 'about-us' element= {<AboutUs/>}/>
           <Route path="services" element={<Services />} />
           <Route path = 'contact' element= {<Contact/>}/>
           <Route path="login" element={<Login  />} />
-          
+
+          </Route>
         </Routes>
     </div>
   );
 }
 
 // npm install react-router-doms
+
+
+
+// dynamic routes
+// if any routes does not we want to show differenet ui
+// Switch
+// nested routes
+// params
+// location 
+// history
+// link
+// navLink
+// useLocation
+// outlet
+// navigate 
+// redirect
