@@ -14,12 +14,11 @@ export default function App() {
     <div className="App">
         <Routes>
           <Route  path="/" element = {<NavBar/>}>
-          <Route element={<Home />} />
+          <Route index element = {<Home/>}/>
           <Route path = 'about-us' element= {<AboutUs/>}/>
           <Route path="services" element={<Services />} />
           <Route path = 'contact' element= {<Contact/>}/>
           <Route path="login" element={<Login  />} />
-
           </Route>
         </Routes>
     </div>
